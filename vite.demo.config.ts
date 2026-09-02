@@ -8,6 +8,7 @@ import {resolve} from 'node:path';
  */
 export default defineConfig({
   root: resolve(__dirname, 'demo'),
+  base: './',
   plugins: [vue()],
   resolve: {
     alias: {
@@ -23,6 +24,5 @@ export default defineConfig({
   build: {
     outDir: resolve(__dirname, 'demo-dist'),
     emptyOutDir: true,
-    base: './',
   },
 });
