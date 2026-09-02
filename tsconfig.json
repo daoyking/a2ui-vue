@@ -1,0 +1,30 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "lib": ["ES2022", "DOM", "DOM.Iterable"],
+    "jsx": "preserve",
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noImplicitOverride": true,
+    "exactOptionalPropertyTypes": false,
+    "declaration": true,
+    "declarationMap": true,
+    "sourceMap": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "verbatimModuleSyntax": false,
+    "noEmit": true,
+    "types": ["vitest/globals"],
+    "paths": {
+      "@a2ui/vue": ["./src/index.ts"],
+      "@a2ui/vue/v0_9": ["./src/v0_9/index.ts"]
+    }
+  },
+  "include": ["src/**/*.ts", "demo/**/*.ts", "demo/**/*.vue", "tests/**/*.ts", "*.ts"],
+  "exclude": ["node_modules", "dist"]
+}

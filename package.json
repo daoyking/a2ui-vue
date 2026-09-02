@@ -1,0 +1,69 @@
+{
+  "name": "@a2ui/vue",
+  "version": "0.1.0",
+  "description": "Vue 3 renderer for A2UI (Agent-to-User Interface) — lets AI agents speak UI in Vue applications, safely like data.",
+  "license": "Apache-2.0",
+  "type": "module",
+  "keywords": [
+    "a2ui",
+    "a2ui-vue",
+    "agent",
+    "ui",
+    "renderer",
+    "vue",
+    "generative-ui",
+    "llm"
+  ],
+  "homepage": "https://a2ui.org/",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/daoyking/a2ui-vue.git"
+  },
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    },
+    "./v0_9": {
+      "types": "./dist/v0_9/index.d.ts",
+      "default": "./dist/v0_9/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "src"
+  ],
+  "sideEffects": false,
+  "scripts": {
+    "dev": "vite --config vite.demo.config.ts",
+    "build": "vue-tsc --noEmit && vite build",
+    "build:demo": "vite build --config vite.demo.config.ts",
+    "typecheck": "vue-tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "peerDependencies": {
+    "vue": "^3.5.0",
+    "zod": "^3.25.76"
+  },
+  "dependencies": {
+    "@a2ui/web_core": "^0.10.7",
+    "markdown-it": "^14.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "@types/markdown-it": "^14.1.2",
+    "@vitejs/plugin-vue": "^6.0.1",
+    "@vue/test-utils": "^2.4.6",
+    "jsdom": "^29.1.1",
+    "typescript": "~5.9.3",
+    "vite": "^7.1.0",
+    "vitest": "^3.2.4",
+    "vue": "^3.5.13",
+    "vue-tsc": "^3.1.0",
+    "zod": "^3.25.76"
+  }
+}
